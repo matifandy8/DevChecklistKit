@@ -1,12 +1,34 @@
 {
-"scripts": {
-    "start": "npx tailwindcss -i .style.css -o ./output.css --watch"
+  "name": "dev-checklist-kit",
+  "version": "1.0.1",
+  "description": "A CLI tool that generates a developer checklist Markdown file.",
+  "bin": {
+    "checklist-kit": "./cli.js"
   },
-  "dependencies": {
-    "tailwindcss": "^4.1.11"
+  "scripts": {
+    "start": "npx tailwindcss -i ./style.css -o ./output.css --watch",
+    "dev": "live-server",
+    "build": "npx tailwindcss -i ./style.css -o ./output.css",
+    "create-checklist": "node cli.js"
   },
+  "keywords": [
+    "checklist",
+    "developer",
+    "markdown",
+    "cli",
+    "productivity",
+    "starter",
+    "toolkit"
+  ],
+  "author": "Matías Fandiño",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "cli.js",
+    "README.md"
+  ],
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.11",
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "tailwindcss": "^4.1.11"
   }
 }
