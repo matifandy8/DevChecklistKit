@@ -1,6 +1,6 @@
 # DevChecklistKit
 
-[![NPM version](https://img.shields.io/npm/v/devchecklists.svg?style=flat)](https://www.npmjs.com/package/devchecklists) [![NPM downloads](https://img.shields.io/npm/dm/devchecklists.svg?style=flat)](https://npmjs.org/package/devchecklists) [![License](https://img.shields.io/npm/l/devchecklists.svg?style=flat)](https://github.com/matifandy8/DevChecklistKit/blob/main/LICENSE)
+[![NPM version](https://img.shields.io/npm/v/dev-checklist-kit.svg?style=flat)](https://www.npmjs.com/package/dev-checklist-kit) [![NPM downloads](https://img.shields.io/npm/dm/dev-checklist-kit.svg?style=flat)](https://npmjs.org/package/dev-checklist-kit) [![License](https://img.shields.io/npm/l/dev-checklist-kit.svg?style=flat)](https://github.com/matifandy8/DevChecklistKit/blob/main/LICENSE)
 
 > A simple, ready-to-use, professional deployment checklist for your web projects, delivered as a Markdown file via npm.
 
