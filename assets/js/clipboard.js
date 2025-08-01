@@ -1,5 +1,3 @@
-// clipboard.js
-
 function copySection(id) {
   const text = document.getElementById(id).innerText;
   navigator.clipboard.writeText(text).then(() => {
@@ -24,13 +22,19 @@ document.addEventListener("DOMContentLoaded", () => {
     copyCommandBtn.addEventListener("click", () => {
       const code = document.querySelector("code").innerText;
       navigator.clipboard.writeText(code).then(() => {
-        const button = copyCommandBtn;
-        const originalText = button.querySelector("span").textContent;
-        button.querySelector("span").textContent = "Copied!";
+        const originalText = copyCommandBtn.querySelector("span").textContent;
+        copyCommandBtn.querySelector("span").textContent = "Copied!";
         setTimeout(() => {
-          button.querySelector("span").textContent = originalText;
+          copyCommandBtn.querySelector("span").textContent = originalText;
         }, 1500);
       });
+    });
+  }
+
+  const copySectionBtn = document.getElementById("copy-section-button");
+  if (copySectionBtn) {
+    copySectionBtn.addEventListener("click", () => {
+      copySection("markdown-content");
     });
   }
 });
