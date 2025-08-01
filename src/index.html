@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="Content-Security-Policy"
+  content="default-src 'self'; style-src 'self'; script-src 'self';" />
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta name="Referrer-Policy" content="no-referrer-when-downgrade" />
+    <meta name="description"
+        content="DevChecklistKit - The ultimate checklist for web developers. Ship faster, safer, and with confidence. Use, copy, and share best practices for modern web projects.">
+    <meta name="keywords"
+        content="DevChecklistKit, web development, checklist, best practices, web developers, modern web projects, deployment, performance, security, SEO, accessibility">
+    <meta name="author" content="DevChecklistKit Team">
+    <link rel="canonical" href="https://devchecklistkit.com" />
+    <title>DevChecklistKit</title>
+    <!-- Tailwind CSS CDN -->
+  <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-800 text-white">
+    <header>
+        <nav class="bg-gray-800 p-4 text-white flex justify-between items-center">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-white text-lg font-bold">DevChecklistKit</a>
+            </div>
+            <ul class="flex space-x-4">
+                <li><a href="https://github.com/matifandy8/DevChecklistKit" target="_blank"
+                        class="text-white hover:text-gray-300 flex"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-github-icon lucide-github">
+                            <path
+                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                            <path d="M9 18c-4.51 2-5-2-7-2" />
+                        </svg> GitHub</a></li>
+                <li><a href="#pricing" target="_blank" class="text-white hover:text-gray-300">Npm</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container mx-auto p-4">
+        <section class="bg-gray-800 py-12 px-4 text-center">
+            <div class="max-w-2xl mx-auto text-center px-4">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">
+                    DevChecklistKit
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
+                    The ultimate checklist for web developers. <br class="hidden sm:block" />
+                    Ship faster, safer, and with confidence.<br>
+                    Use, copy, and share best practices for modern web projects.
+                </p>
+                <div class="flex justify-center">
+                    <a href="https://github.com/matifandy8/DevChecklistKit" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 bg-blue-800 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 18c-4.51 2-5-2-7-2" />
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="mb-8 mt-8">
+                <div class="code-block rounded-2xl p-5 bg-zinc-900 shadow-xl border border-zinc-800">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                        </div>
+
+                        <button id="copy-command"
+                            class="flex items-center space-x-1 text-xs bg-zinc-700 hover:bg-zinc-600 text-white py-1 px-2 rounded-md transition active:scale-95"
+                            aria-label="Copy command to clipboard" title="Copy to clipboard">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                            </svg>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+
+                    <pre
+                        class="text-green-400 text-sm md:text-base font-mono bg-zinc-800 rounded-lg p-4 overflow-x-auto">
+<code>npx dev-checklist-kit</code></pre>
+                </div>
+            </div>
+
+
+            <div class="flex gap-3">
+                <a href="https://github.com/matifandy8/DevChecklistKit" target="_blank"
+                    class="flex items-center justify-center space-x-2 bg-zinc-800 hover:bg-zinc-900 text-white font-medium py-2.5 px-6 rounded-xl transition-all hover:shadow-lg hover:scale-105">
+                    <span>Github</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+                    </svg>
+                </a>
+                <a href="https://www.npmjs.com/package/dev-checklist-kit" target="_blank"
+                    class="flex items-center justify-center space-x-2 bg-white hover:bg-zinc-50 text-zinc-800 font-medium py-2.5 px-6 rounded-xl border border-zinc-200 transition-all hover:shadow-lg">
+                    <span>NPM Package</span>
+                </a>
+            </div>
+            </div>
+            </div>
+        </section>
+        <section class="rounded shadow p-6">
+            <div class="flex flex-col justify-center">
+                <div id="markdown-preview"
+                    class="code-block rounded-2xl p-5 bg-zinc-900 shadow-xl border border-zinc-800 max-h-screen overflow-auto">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-base md:text-lg font-semibold text-white">
+                            dev-checklist-kit.md
+                        </h3>
+                        <button onclick="copySection('markdown-content')" aria-label="Copy command to clipboard"
+                            title="Copy to clipboard"
+                            class="text-sm bg-gray-200 text-gray-900 font-medium py-1 px-3 rounded transition-colors active:translate-y-px transition duration-200 ease-out">
+                            Copy <span class="hidden md:inline-block">Markdown</span>
+                        </button>
+                    </div>
+                    <div class="overflow-auto max-h-[60vh] prose prose-sm prose-invert">
+                        <pre><code class="language-markdown" id="markdown-content"># ✅ Website Deployment Checklist
+
+## 1. Code & Functionality
+- [ ] All pages load correctly (no 404s or errors) - add pages 404 or error page 
+- [ ] Forms work, validate properly, and handle invalid input 
+- [ ] No broken links (internal or external)
+- [ ] Responsive design (mobile/tablet/desktop)
+- [ ] Cross-browser tested (Chrome, Firefox, Safari, Edge)
+- [ ] Console is free of JavaScript errors and warnings
+- [ ] Third-party services (APIs, payments, embeds) are integrated and tested
+- [ ] Routes and redirects function correctly (including 404 and 500 pages)
+- [ ] Code is modular, reusable, and follows naming conventions
+- [ ] Edge cases are handled (empty states, long content, offline mode)
+- [ ] Loading and error states are implemented properly
+- [ ] Lazy loading or code splitting is used where applicable
+- [ ] State management works correctly and doesn’t leak data
+- [ ] Inputs are sanitized to prevent XSS or injection attacks
+- [ ] No sensitive data (tokens, secrets) exposed in frontend
+- [ ] Async functions have error handling (try/catch or .catch)
+- [ ] Important events (clicks, errors, user actions) are tracked (if analytics is used)
+- [ ] Animations and transitions don’t block or break functionality
+- [ ] Lighthouse performance score is above 80
+- [ ] No framework warnings (e.g., React keys, hydration mismatches)
+- [ ] Forms have protection against double submissions (e.g., disable button after click)
+- [ ] Frontend enforces business rules (e.g., can't delete what wasn't created)
+- [ ] Basic authentication/authorization works (if applicable)
+
+## 2. Performance Optimization
+- [ ] Images are optimized (compressed without quality loss)
+- [ ] CSS/JS is minified
+- [ ] Lazy loading is enabled for large assets
+- [ ] Code splitting and tree shaking (if using frameworks like React/Vue)
+- [ ] CDN is configured for static assets (if needed)
+- [ ] Lighthouse or PageSpeed scores are acceptable
+
+🧠 Extended Checklist (Advanced / Often Missed)
+- [ ] Critical CSS is inlined
+- [ ] Fonts are optimized and loaded efficiently (e.g., font-display: swap)
+- [ ] HTTP/2 or HTTP/3 is enabled
+- [ ] Third-party scripts are audited
+- [ ] Preconnect / DNS-prefetch / Preload hints are used wisely
+- [ ] JavaScript is deferred or loaded async when possible
+- [ ] Avoid excessive DOM nodes
+- [ ] Server response times (TTFB) are optimized
+- [ ] Set caching policies (Cache-Control / ETag)
+- [ ] Use efficient data formats (e.g., JSON over XML, Brotli compression)
+
+## 3. SEO & Metadata
+- [ ] Title tags and meta descriptions for all pages
+- [ ] Open Graph and Twitter meta tags for social sharing
+- [ ] Sitemap.xml is generated and linked in robots.txt
+- [ ] Robots.txt is present and configured correctly
+- [ ] Canonical tags are set to avoid duplicate content
+- [ ] H1-H6 hierarchy is logical
+
+## 4. Security
+
+🔐 Authentication & Authorization
+- [ ] Admin/dashboard is protected with proper authentication 🧠
+- [ ] Sessions are secure (HTTPOnly, Secure, SameSite cookies or secure tokens) 
+- [ ] Rate limiting is applied to login and sensitive endpoints (e.g., express-rate-limit)
+- [ ] Passwords are hashed securely using bcrypt, Argon2, etc. 
+- [ ] Roles and permissions are enforced server-side 
+
+🌐 Network & Transport
+- [ ] HTTPS is enforced (SSL/TLS installed, 301 redirects from HTTP) 
+- [ ] HSTS headers are set  (Strict-Transport-Security)
+- [ ] CORS is properly configured and restrictive 
+
+🧼 Input & Output Handling
+- [ ] Input validation & sanitization in place  (use libraries like valibot, zod, express-validator)
+- [ ] Outputs are encoded to prevent XSS (especially user-generated content) 
+- [ ] File uploads are validated for type and size 
+- [ ] No eval / Function() or insecure dynamic code 🧠
+
+🧰 Dependencies & Infrastructure
+- [ ] Dependencies are up-to-date and scanned for vulnerabilities  (npm audit, snyk, dependabot)
+- [ ] Environment variables are not exposed to client 
+- [ ] Error messages don’t expose stack traces or sensitive data 
+- [ ] Backend is not exposing internal logic or debug routes 🧠
+- [ ] Database access is protected (no open ports, use firewalls) 🧠
+
+🛡️ Headers & Browser Protections
+- [ ] Security headers are set (helmet, Content-Security-Policy, X-Frame-Options, etc.) 
+- [ ] CSP (Content Security Policy) blocks inline scripts and limits resources 
+- [ ] CSRF protection is in place for state-changing operations 
+
+🐍 Attack Surfaces & Testing
+- [ ] Common OWASP vulnerabilities are tested against (XSS, CSRF, SSRF, etc.) 🧠
+- [ ] Vulnerability scanning is performed (e.g., OWASP ZAP, nmap, nikto) 
+- [ ] Logs are monitored for unusual activity 🧠
+- [ ] 2FA is enforced for admin accounts (if applicable) 🧠
+
+## 5. Analytics & Monitoring
+📈 Basic Analytics
+- [ ] Google Analytics (or alternative) is installed Plausible (lightweight, GDPR-friendly), Matomo (self-hosted option), Fathom
+
+🧩 Event & Custom Tracking
+- [ ] Custom events and goals are defined. Track specific interactions like clicks, signups, purchases — not just pageviews.
+      Tool: Google Analytics 4 (GA4), or gtag("event", ...) for custom tracking.
+- [ ] Consent-based tracking is respected
+
+🚨 Error Logging
+- [ ] Frontend error logging is enabled (e.g., Sentry, LogRocket, Bugsnag)
+- [ ] Backend error logging is in place 
+      Tools: Winston, Logtail, Sentry, Datadog
+- [ ] Alerts are configured for critical issues
+
+🚀 Performance Monitoring
+- [ ] Core Web Vitals are tracked over time
+    Tools: Google Analytics 4 (enable Web Vitals), Calibre, SpeedCurve
+
+- [ ] Real User Monitoring (RUM) is active
+      Tools: Datadog, Pingdom, New Relic, LogRocket
+
+⏱️ Uptime & Availability
+- [ ] Uptime monitoring is configured
+      Tools: UptimeRobot (Free for 5 monitors), Updown.io, Better Uptime
+- [ ] Downtime alerts go to the right person/channel
+- [ ] SSL and domain expiration alerts
+      Tool: Updown.io or use whois tools with notification services.
+
+## 6. Accessibility (a11y)
+- [ ] Images have alt text
+- [ ] All images have descriptive alt text, or empty alt="" if decorative
+- [ ]Form fields have associated <label> elements, or appropriate aria-label
+- [ ] The interface is fully navigable with keyboard (Tab, Enter, Esc, etc.)
+- [ ] ARIA attributes (role, aria-label, aria-describedby, etc.) are used where needed
+- [ ] Color contrast meets WCAG AA standards (4.5:1 for normal text, 3:1 for large text)
+- [ ] Interactive elements (like buttons and links) are clearly focusable and accessible
+- [ ] No essential information is conveyed by color alone (use icons/text too)
+- [ ] Semantic HTML is used (headings, lists, nav, main, etc.)
+- [ ] Live content updates (like form errors or alerts) use aria-live or role="alert"
+- [ ] The <html> element includes the correct lang attribute (e.g. <html lang="en">)
+
+## 7. Backend & Database
+- [ ] Database is secured and not publicly accessible
+- [ ] Backups are configured
+- [ ] API routes are protected and rate-limited
+- [ ] Server logs and error handling in place
+- [ ] Environment variables set correctly (`NODE_ENV=production`, etc.)
+
+## 8. Deployment Readiness
+🔧 Core Deployment Checks
+- [ ] Domain name is pointed to the correct server
+- [ ] Hosting configuration is correct (e.g., Nginx, Apache, Vercel, Netlify)
+- [ ] Build tools (e.g., Webpack, Vite, Next.js) are in production mode
+- [ ] CI/CD pipeline is tested and stable
+- [ ] Fallback 404 page and custom error pages are configured
+
+🔒 Security & Access
+- [ ] HTTPS is enforced (SSL/TLS active)
+- [ ] Environment variables are correctly set and not exposed
+- [ ] Admin/dashboard routes are protected or hidden
+
+🌐 Real-World Readiness
+- [ ] Test performance on slow/mobile networks
+- [ ] Content is localized or adaptable (i18n if needed)
+- [ ] Timezone-sensitive features tested
+
+🧠 Bonus Deployment Good Practices
+- [ ] 404 redirect for SPAs or Next.js dynamic routes is working
+- [ ] Sitemap and robots.txt are deployed
+- [ ] Favicons and meta tags are in place
+- [ ] Database migrations (if needed) have run
+- [ ] Clean and trackable versioning (via git tag or env var)
+- [ ] Log monitoring and error tracking enabled
+
+## 9. Legal and Compliance
+- [ ] Cookie consent banner (if needed)
+- [ ] Privacy policy & terms of service pages
+- [ ] GDPR compliance (for EU audiences)
+- [ ] License compliance for third-party code/assets
+                        </code></pre>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </section>
+    </main>
+    <div id="toast"
+        class="fixed bottom-6 right-6 bg-zinc-800 text-white px-6 py-3 rounded-xl shadow-lg transform translate-y-16 opacity-0 transition-all duration-300 z-50">
+        <div class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-400" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+            <span id="toast-message">Copied to clipboard!</span>
+        </div>
+    </div>
+    <footer class="mt-20 px-4 py-6 text-center text-sm text-gray-500 border-t border-zinc-800">
+        <p class="mb-1">&copy; 2025 <strong class="font-semibold text-white">DevChecklistKit</strong>. All rights
+            reserved.</p>
+        <p class="mb-1">
+            Made with <span aria-label="love" role="img" class="text-red-500">❤️</span> by
+            <span class="font-medium text-white">DevChecklistKit Team</span>
+        </p>
+        <p>
+            Contribute on
+            <a href="https://github.com/matifandy8/DevChecklistKit" target="_blank" rel="noopener noreferrer"
+                class="text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-200">GitHub</a>
+        </p>
+    </footer>
+    <script src="clipboard.js" defer></script>
+</body>
+
+</html>
