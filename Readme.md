@@ -21,18 +21,15 @@ Never forget a crucial deployment step again! DevChecklistKit provides a compreh
 
 ## Getting Started
 
-### Installation
+### Installation & Usage
 
-Install the package as a development dependency:
+Simply run this command to get the checklist markdown file:
 
 ```bash
-npm install dev-checklists-kit --save-dev
+npx dev-checklist-kit
 ```
 
-### Usage
-
-The file `dev-checklist-kit.md` will be available in your project.  
-Copy it or use it directly in your workflow.
+This will generate the `dev-checklist-kit.md` file in your current directory, ready to use in your workflow.
 
 ## Contributing
 

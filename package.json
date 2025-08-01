@@ -1,6 +1,6 @@
 {
   "name": "dev-checklist-kit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A CLI tool that generates a developer checklist Markdown file.",
   "bin": {
     "checklist-kit": "./cli.js"
